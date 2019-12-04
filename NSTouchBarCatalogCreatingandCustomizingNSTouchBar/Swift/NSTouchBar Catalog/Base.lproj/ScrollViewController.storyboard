@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="wyg-tK-EQJ">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="14550"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="the Touch Bar" minToolsVersion="8.1" minSystemVersion="10.12.2" requiredIntegratedClassName="NSTouchBar"/>
+    </dependencies>
+    <scenes>
+        <!--Scroll View Controller-->
+        <scene sceneID="uqL-IM-Kav">
+            <objects>
+                <viewController id="wyg-tK-EQJ" customClass="ScrollViewController" customModule="NSTouchBar_Catalog" sceneMemberID="viewController">
+                    <view key="view" id="UfL-6e-7pI">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="128"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="PRt-Hx-2hf">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="128"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Dm-fu-hsv">
+                                        <rect key="frame" x="18" y="92" width="414" height="16"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Shows a NSCustomTouchBarItem using an NSScrollView" id="Y7l-Vu-Jda">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3Dm-fu-hsv" secondAttribute="trailing" constant="20" symbolic="YES" id="NI2-3U-JEa"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="ZmY-Av-YAW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="450" id="e0T-yR-YaH"/>
+                                    <constraint firstItem="3Dm-fu-hsv" firstAttribute="leading" secondItem="PRt-Hx-2hf" secondAttribute="leading" constant="20" symbolic="YES" id="p01-qe-9x2"/>
+                                    <constraint firstItem="3Dm-fu-hsv" firstAttribute="top" secondItem="PRt-Hx-2hf" secondAttribute="top" constant="20" id="rtC-Au-4tK"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="PRt-Hx-2hf" firstAttribute="leading" secondItem="UfL-6e-7pI" secondAttribute="leading" id="Lkn-Uz-CIU"/>
+                            <constraint firstItem="PRt-Hx-2hf" firstAttribute="top" secondItem="UfL-6e-7pI" secondAttribute="top" id="Y9x-Sa-2wi"/>
+                            <constraint firstAttribute="bottom" secondItem="PRt-Hx-2hf" secondAttribute="bottom" id="aPG-WC-bLc"/>
+                            <constraint firstAttribute="trailing" secondItem="PRt-Hx-2hf" secondAttribute="trailing" id="rJw-iX-QPY"/>
+                        </constraints>
+                    </view>
+                    <touchBar key="touchBar" id="thL-qz-jpF" userLabel="NSTouchBar">
+                        <touchBarItems>
+                            <touchBarItem id="V44-iW-nWo" userLabel="View">
+                                <viewController key="viewController" id="tsL-3d-2GW">
+                                    <view key="view" translatesAutoresizingMaskIntoConstraints="NO" id="L17-bT-re5">
+                                        <rect key="frame" x="0.0" y="0.0" width="410" height="30"/>
+                                        <subviews>
+                                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="VxI-uf-V5K">
+                                                <rect key="frame" x="0.0" y="0.0" width="410" height="30"/>
+                                                <clipView key="contentView" id="H9H-IP-9M6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="410" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" spellingCorrection="YES" smartInsertDelete="YES" id="PJu-53-R2b">
+                                                            <rect key="frame" x="0.0" y="0.0" width="410" height="70"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="linkColor" catalog="System" colorSpace="catalog"/>
+                                                            <size key="minSize" width="410" height="30"/>
+                                                            <size key="maxSize" width="410" height="10000000"/>
+                                                            <attributedString key="textStorage">
+                                                                <fragment>
+                                                                    <string key="content">The user controls the width of the Control Strip and can choose to hide it, and the system is in charge of the nesting of NSTouchBar instances (for the bars you make eligible for composition). As a result, the available display width for your bars can vary. There is no API for you to obtain the current available display width.</string>
+                                                                    <attributes>
+                                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                        <font key="NSFont" size="12" name="Helvetica"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        </textView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </clipView>
+                                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="KNI-LA-4d0">
+                                                    <rect key="frame" x="0.0" y="14" width="410" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="Iip-MP-6JG">
+                                                    <rect key="frame" x="-100" y="-100" width="16" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                            </scrollView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="VxI-uf-V5K" firstAttribute="top" secondItem="L17-bT-re5" secondAttribute="top" id="4cd-cJ-ahM"/>
+                                            <constraint firstAttribute="bottom" secondItem="VxI-uf-V5K" secondAttribute="bottom" id="UIh-Hj-9Q4"/>
+                                            <constraint firstItem="VxI-uf-V5K" firstAttribute="leading" secondItem="L17-bT-re5" secondAttribute="leading" id="rd0-vw-oVa"/>
+                                            <constraint firstAttribute="trailing" secondItem="VxI-uf-V5K" secondAttribute="trailing" id="sNI-aj-pJn"/>
+                                        </constraints>
+                                    </view>
+                                </viewController>
+                                <size key="designTimeSize" width="410" height="30"/>
+                            </touchBarItem>
+                        </touchBarItems>
+                    </touchBar>
+                </viewController>
+                <customObject id="tpe-gi-lSa" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147" y="8"/>
+        </scene>
+    </scenes>
+</document>
